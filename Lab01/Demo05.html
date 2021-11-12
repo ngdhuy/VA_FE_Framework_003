@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    div {
+      background-color: #cc3366;
+      color: #fff;
+      width: 360px;
+      height: 240px;
+      margin: 20px;
+      text-align: center;
+      line-height: 240px;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="show">Button Show</button>
+  <button type="button" class="hide">Button Hide</button>
+  <button type="button" class="fade-in">Button Fade-In</button>
+  <button type="button" class="fade-out">Button Fade-Out</button>
+  <button type="button" class="toggle">Button Toggle</button>
+  <div>This is content of Block</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.show').click(function(){
+        $('div').show(500);
+      });
+      
+      $('.hide').click(function(){
+        $('div').hide(300);
+      });
+
+      $('.fade-in').click(function(){
+        $('div').fadeIn(200)
+      });
+
+      $('.fade-out').click(function(){
+        $('div').fadeOut(700);
+      });
+
+      $('.toggle').click(function(){
+        $('div').toggle(1000);  // 1000 ms = 1s 
+      });
+    });
+  </script>
+</body>
+</html>
