@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Demo 02 - jQuery Selector</h1>
+
+  <h2>Title of document</h2>
+  
+  <p class="style-a">List of items</p>
+  <ul>
+    <li>This is item 1</li>
+    <li class="style-a">This is item 2</li>
+    <li>This is item 3</li>
+    <li class="style-a">This is item 4</li>
+    <li>This is item 5</li>
+  </ul>
+
+  <p class="style-b">List of items</p>
+  <ol>
+    <li>Sub-document 1</li>
+    <li id="sub-2">Sub-document 2</li>
+    <li>Sub-document 3</li>
+    <li>
+      <div>DIV in-site LI</div>
+      <div>DIV in-site LI</div>
+      <div>DIV in-site LI</div>
+    </li>
+  </ol>
+  <div>This is Footer</div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('h1').css('color', '#cc3366');
+      
+      $('p').css({
+        'color': '#3366cc',
+        'font-size': '2rem',
+        'font-weight': 'bold'
+      });
+
+      $('.style-a').css('border', '1px solid #cc3366');
+
+      $('#sub-2').css({
+        'color': '#fff',
+        'background-color': '#33cc66'
+      });
+
+      $('li div').css('background-color', '#6633cc');
+    });
+  </script>
+</body>
+</html>
