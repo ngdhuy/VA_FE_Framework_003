@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Demo 02 - jQuery Filter</h1>
+
+  <h2>Title of document</h2>
+  <p class="style-b">List of items</p>
+  <ol>
+    <li>Sub-document 1</li>
+    <li>Sub-document 2</li>
+    <li>Sub-document 3</li>
+    <li>Sub-document 4</li>
+    <li>Sub-document 5</li>
+    <li>
+      <div>ELement DIV in-site LI 1</div>
+      <div>ELement DIV in-site LI 2</div>
+      <div>ELement DIV in-site LI 3</div>
+      <div>ELement DIV in-site LI 4</div>
+      <div>ELement DIV in-site LI 5</div>
+      <div>ELement DIV in-site LI 6</div>
+    </li>
+  </ol>
+  <ul>
+    <li>This is LI item 1</li>
+    <li>This is LI item 2</li>
+    <li>This is LI item 3</li>
+  </ul>
+  <div>This is Footer</div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('li').even().css('background-color', '#cc3366');
+      $('li').eq(3).css('color', '#33cc66');
+      
+      $('ul li').first().css('color', '#fff');
+    });
+  </script>
+</body>
+</html>
