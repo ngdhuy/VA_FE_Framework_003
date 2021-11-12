@@ -18,12 +18,12 @@
     <li>Sub-document 4</li>
     <li>Sub-document 5</li>
     <li>
+      <div>ELement DIV in-site LI 0</div>
       <div>ELement DIV in-site LI 1</div>
       <div>ELement DIV in-site LI 2</div>
       <div>ELement DIV in-site LI 3</div>
       <div>ELement DIV in-site LI 4</div>
       <div>ELement DIV in-site LI 5</div>
-      <div>ELement DIV in-site LI 6</div>
     </li>
   </ol>
   <ul>
@@ -40,6 +40,9 @@
       $('li').eq(3).css('color', '#33cc66');
       
       $('ul li').first().css('color', '#fff');
+
+      $('li div').eq(3).siblings().css('background-color', '#66cc33');
+      $('li div').eq(3).next().css('color', '#fff');
     });
   </script>
 </body>
