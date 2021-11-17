@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert Currency</title>
+</head>
+<body>
+  <h1>Convert Currency</h1>
+  <div>
+    From: <select id="from"></select>
+    To: <select id="to"></select>
+    <button type="button">Convert</button>
+    <span></span>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var key = "108f65849f-ef420d0601-r2m6cd";
+
+      // Load data for DropDownList From/To currency 
+      $.ajax({
+        url: `https://api.fastforex.io/currencies?api_key=${key}`,
+        method: "GET",
+        dataType: "json"
+      }).done(function(data){
+        Object.entries(data.currencies).forEach(function(item){
+          $("#from").append(`<option value="${item[0]}">${item[1]}</option>`);
+          $("#to").append(`<option value="${item[0]}">${item[1]}</option>`);
+        });
+      });
+
+      // Convert currency
+      $("button").click(function(){
+        var from = $("#from").val();
+        var to = $("#to").val();
+        
+        $.ajax({
+          url: `https://api.fastforex.io/fetch-one?from=${from}&to=${to}&api_key=${key}`,
+          method: "GET", 
+          dataType: "json"
+        }).done(function(data){
+          $("span").text(data.result[to]);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
