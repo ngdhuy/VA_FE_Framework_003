@@ -1,0 +1,31 @@
+h1 {
+  background-color: #ff94c2;
+  color: #fff;
+}
+
+div {
+  background-color: #0077c2;
+  color: #fff;
+  padding: 5px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  margin: 1px;
+  background-color: #ff94c2;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  background-color: #0077c2;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
