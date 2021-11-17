@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector - ID & Class</title>
+  <style type="text/css">
+    #first { background-color: #cc3366; }
+
+    .red-style {
+      background-color: #88aa11;
+      color: #cc3366;
+    }
+
+    .big-size {
+      margin: 5px;
+      padding: 5px;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selector - ID & Class</h1>
+  <div>This is document</div>
+  <p>Paragraph out site</p>
+  <ul>
+    <li id="first">This is item 1</li>
+    <li>This is item 2</li>
+    <li>This is item 3</li>
+    <li>This is item 4
+      <div>
+        <p class="red-style">Paragraph in-site</p>
+        <p>Paragraph in-site</p>
+        <p class="big-size">Paragraph in-site</p>
+      </div>
+    </li>
+  </ul>
+  <div class="red-style big-size">This is footer</div>
+
+</body>
+</html>
