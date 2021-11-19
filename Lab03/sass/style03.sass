@@ -1,0 +1,34 @@
+// Modules
+@use 'dark'
+@use 'light' as theme
+
+body
+  background-color: theme.$body-color
+  color: theme.$font-color
+
+h1
+  color: theme.$color-red
+
+div
+  background-color: theme.$color-blue
+  margin: 5px
+
+nav
+  div
+    color: theme.$color-red
+    background-color: theme.$body-color
+  
+  ul
+    list-style: none
+
+    li
+      background-color: theme.$color-blue
+      margin: 1px 0 0 0
+      padding: 5px 10px
+
+a
+  text-decoration: none
+  color: theme.$color-white
+  background-color: theme.$color-red
+  display: block
+  padding: 5px 10px

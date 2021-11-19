@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector - Grouping</title>
+  <style type="text/css">
+    #first {
+      font-weight: bold;
+    }
+
+    .red-style {
+      border: 5px solid #66cc33;
+    }
+
+    h1 {
+      padding: 10px;
+      box-shadow: 10px 20px 10px #112233;
+    }
+
+    #first, .red-style, h1{
+      color: #a1a1a1;
+      background-color: #cc3366;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selector - Grouping</h1>
+  <div id="first">This is document</div>
+  <p>Paragraph out site</p>
+  <ul>
+    <li>This is item 1</li>
+    <li>This is item 2</li>
+    <li>This is item 3</li>
+    <li>This is item 4
+      <div>
+        <p>Paragraph in-site</p>
+        <p>Paragraph in-site</p>
+        <p>Paragraph in-site</p>
+      </div>
+    </li>
+  </ul>
+  <div class="red-style">This is footer</div>
+
+</body>
+</html>

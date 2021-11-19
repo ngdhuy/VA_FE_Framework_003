@@ -1,0 +1,42 @@
+// Modules
+@use 'dark' as theme
+@use 'light'
+
+// Extend/Inherit
+%set-size
+  padding: 10px 20px
+  margin: 5px 0 0 0
+
+%set-content-color
+  background-color: theme.$color-white
+  color: theme.$font-color
+
+body
+  background-color: theme.$body-color
+  color: theme.$font-color
+
+h1
+  color: theme.$color-red
+
+div
+  background-color: theme.$color-blue
+  margin: 5px
+
+nav
+  div
+    color: theme.$color-red
+    background-color: theme.$body-color
+  
+  ul
+    list-style: none
+
+    li
+      @extend %set-content-color
+      @extend %set-size
+
+a
+  text-decoration: none
+  color: theme.$color-white
+  background-color: theme.$color-red
+  display: block
+  padding: 5px 10px

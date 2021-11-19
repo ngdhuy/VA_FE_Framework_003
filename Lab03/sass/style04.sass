@@ -1,0 +1,42 @@
+// Modules
+@use 'dark' as theme
+@use 'light'
+
+// @mixin ~ function
+@mixin box($top-bottom: 2px, $left-right: 5px)
+  padding: $top-bottom $left-right
+  margin: $top-bottom
+  box-shadow: $top-bottom $left-right 10px rgba(theme.$color-white, 0.25)
+
+body
+  background-color: theme.$body-color
+  color: theme.$font-color
+
+h1
+  color: theme.$color-red
+
+div
+  background-color: theme.$color-blue
+  margin: 5px
+
+nav
+  div
+    color: theme.$color-red
+    background-color: theme.$body-color
+    @include box()
+  
+  ul
+    list-style: none
+
+    li
+      background-color: theme.$color-blue
+      margin: 1px 0 0 0
+      padding: 5px 10px
+      @include box(10px, 20px)
+
+a
+  text-decoration: none
+  color: theme.$color-white
+  background-color: theme.$color-red
+  display: block
+  padding: 5px 10px

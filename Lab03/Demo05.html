@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector - Contextual</title>
+  <style type="text/css">
+    ul div { background-color: #cc3366; }
+    div > p {
+      color: #a1a1a1;
+    }
+
+    div * {
+      font-size: 3rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selector - Contextual</h1>
+  <div>
+    This is document
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi corporis cupiditate vitae accusamus ipsam corrupti autem ut. Enim, est? Commodi modi asperiores eveniet dolorum ducimus sit voluptatem laboriosam, quae beatae.</p>
+    </section>
+  </div>
+  <p>Paragraph out site</p>
+  <ul>
+    <li>This is item 1</li>
+    <li>This is item 2</li>
+    <li>This is item 3</li>
+    <li>This is item 4
+      <div>
+        <p>Paragraph in-site</p>
+        <p>Paragraph in-site</p>
+        <p>Paragraph in-site</p>
+        <h3>This is heading level 3</h3>
+      </div>
+    </li>
+  </ul>
+  <div>This is footer</div>
+
+</body>
+</html>
