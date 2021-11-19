@@ -1,14 +1,8 @@
 nav ul li {
-  padding: 10px 20px;
-  margin: 5px 0.33%;
-  width: 33.3333333333%;
-  height: 50px;
-  float: left;
-}
-
-nav ul li {
-  background-color: #b1bfca;
-  color: #fff;
+  background-color: #fff;
+  color: #ba2d65;
+  margin: 1px 0 0 0;
+  padding: 5px 10px;
 }
 
 body {
@@ -17,7 +11,10 @@ body {
 }
 
 h1 {
+  background-color: #b1bfca;
   color: #ba2d65;
+  box-shadow: 10px 20px 30px #0077c2;
+  border-radius: 5px 5px;
 }
 
 div {

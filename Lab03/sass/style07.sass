@@ -1,0 +1,56 @@
+// Modules
+@use 'dark' as theme
+@use 'light'
+
+// function
+@function make-shadow($value)
+  $result: 1
+  @for $base from 1 through $value
+    $result: $result + $base
+  @return $result
+
+// mixin
+@mixin shadow($color, $radius: 0)
+  box-shadow: 10px 20px 30px rgba($color, make-shadow(25))
+  @if $radius > 0
+    border-radius: $radius $radius
+
+// extend
+%set-content-color
+  background-color: theme.$font-color
+  color: theme.$color-red
+  margin: 1px 0 0 0
+  padding: 5px 10px
+
+body
+  background-color: theme.$body-color
+  color: theme.$font-color
+
+h1
+  background-color: theme.$color-white
+  color: theme.$color-red
+  @include shadow(theme.$color-blue, 5px)
+  
+
+div
+  background-color: theme.$color-blue
+  margin: 5px
+
+nav
+  div
+    color: theme.$color-red
+    background-color: theme.$body-color
+  
+  ul
+    list-style: none
+    overflow: hidden
+
+    li
+      @extend %set-content-color
+
+a
+  text-decoration: none
+  color: theme.$color-white
+  background-color: theme.$color-red
+  display: block
+  padding: 5px 10px
