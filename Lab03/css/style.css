@@ -1,31 +1,42 @@
-h1 {
-  background-color: #ff94c2;
+body {
+  background-color: #000;
   color: #fff;
+}
+
+h1 {
+  color: #ba2d65;
 }
 
 div {
   background-color: #0077c2;
-  color: #fff;
-  padding: 5px;
+  margin: 5px;
 }
 
+nav div {
+  color: #ba2d65;
+  background-color: #000;
+  padding: 2px 5px;
+  margin: 2px;
+  box-shadow: 2px 5px 10px rgba(177, 191, 202, 0.25);
+}
 nav ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
-nav li {
-  margin: 1px;
-  background-color: #ff94c2;
-  color: #fff;
+nav ul li {
+  background-color: #0077c2;
+  margin: 1px 0 0 0;
+  padding: 5px 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  box-shadow: 10px 20px 10px rgba(177, 191, 202, 0.25);
 }
 
 a {
   text-decoration: none;
+  color: #b1bfca;
+  background-color: #ba2d65;
   display: block;
   padding: 5px 10px;
-  background-color: #0077c2;
-  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
